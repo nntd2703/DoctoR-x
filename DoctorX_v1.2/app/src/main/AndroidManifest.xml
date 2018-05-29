@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.vinh.doctor_x">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.location"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="true" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:exported="true"
+        android:icon="@drawable/heath_care_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".activity_infor_doctor"
+            android:theme="@style/AppTheme.Dark"/>
+        <activity
+            android:name=".Login_Activity"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name=".SignUp_Activity"
+            android:theme="@style/AppTheme.Dark" />
+        <activity android:name=".Main_doctor" />
+        <activity android:name=".Main_Patient" />
+        <activity android:name=".Testmap" />
+        <activity
+            android:name=".Main_Screen_Acitivity"
+            android:exported="true" />
+
+        <service android:name=".service" />
+
+        <activity
+            android:name=".screen"
+            android:theme="@style/AppTheme.Dark">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/key_API_map" />
+
+        <activity android:name=".Realtime_Location_Map_Activity" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+
+        <activity
+            android:name=".Doctor_Realtime_Map_Activity"
+            android:allowBackup="true"
+            android:label="@string/title_activity_doctor__realtime__map_"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name=".Doctor_History_Acitivity"
+            android:theme="@style/AppTheme.DarkHAB" />
+        <activity
+            android:name=".Doctor_Follow_Activity"
+            android:theme="@style/AppTheme.DarkHAB" />
+        <activity
+            android:name=".Patient_Call_Emer_Activity"
+            android:theme="@style/AppTheme.DarkHAB" />
+        <activity android:name=".Medical.MedicalProblems" />
+        <activity android:name=".Medical.RequiredMedicines" />
+        <activity android:name=".Web.WebsiteView" />
+        <activity android:name=".NearbyLocations.GMap.ListHealthCenters" />
+        <activity
+            android:name=".NearbyLocations.GMap.MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".Doctor_of_Patient_Acitivity" android:theme="@style/AppTheme.DarkHAB"></activity>
+    </application>
+
+</manifest>
