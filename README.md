@@ -1,2 +1,7 @@
 # DoctoR-x
-Doctor-X android
+Technical Use
+
+- Firebase
+- Google map
+- Service
+- Json 
